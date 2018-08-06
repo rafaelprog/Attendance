@@ -1,0 +1,67 @@
+
+@{
+    ViewBag.Title = "Chat";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Box</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="chatbox.css">
+    <link href="~/Content/safrachat.css" rel="stylesheet" />
+</head>
+<body>
+    <input type="hidden" id="displayname" />
+    <div class="chatbox chatbox--tray chatbox--empty">
+        <div class="chatbox__title">
+            <h5><a href="#">Safra - Chat</a></h5>
+            <button class="chatbox__title__tray">
+                <span></span>
+            </button>
+        </div>
+        <div id="chatBody" class="chatbox__body">
+
+            <div class="chatbox__body__message chatbox__body__message--left">
+                <img src="http://blogdocarlossantos.com.br/wp-content/uploads/2017/11/Banco-Safra-e1510940510319.png" alt="Picture">
+
+                <p><span style="color:darkblue">Safra:</span><br />Bem Vindo ao chat da sua equipe! Tenha um ótimo trabalho...</p>
+            </div>
+
+            @{
+                for (int i = 0; i < 10; i++)
+                {
+                    @*<div class="chatbox__body__message chatbox__body__message--left">
+                            <small class="pull-right text-muted">
+                                <span class="glyphicon glyphicon-time"></span> 12 mins ago
+                            </small>
+
+                            <img src="http://blogdocarlossantos.com.br/wp-content/uploads/2017/11/Banco-Safra-e1510940510319.png" alt="Picture">
+
+                            <p><span style="color:darkviolet">Rocholi:</span><br />Hoje a reunião sera as 15:30!</p>
+                        </div>*@
+                }
+            }
+        </div>
+        <div class="panel-footer">
+            <div class="input-group">
+                <input id="btnInput" type="text" class="chatbox__message" placeholder="Escreva sua mensagem..." style="width:200px" />
+                <span class="input-group-btn">
+                    <button id="btnSend" class="btn btn-primary btn-sm">Send</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+@section scripts {
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.3.0.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/safrachat.js"></script>
+}
