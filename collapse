@@ -1,4 +1,7 @@
 https://codepen.io/anon/pen/xaWyaM
+http://www.chartjs.org/samples/latest/
+
+
 
 model IEnumerable<App.Models.Pessoa>
 
