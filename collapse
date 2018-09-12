@@ -1,4 +1,6 @@
-@model IEnumerable<App.Models.Pessoa>
+https://codepen.io/anon/pen/xaWyaM
+
+model IEnumerable<App.Models.Pessoa>
 
 @{
     Layout = null;
