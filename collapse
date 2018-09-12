@@ -1,6 +1,49 @@
 https://codepen.io/anon/pen/xaWyaM
 http://www.chartjs.org/samples/latest/
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+<div class="teste" ><canvas  id="myChart"></canvas> </div>
+
+
+<style>
+.teste{
+    width: 700px;
+    height: 333px;
+/*    
+    border: 0.5px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+    border-radius: 5px; */
+}
+</style>
+<script>
+function codeAddress(){
+    var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    
+    type: 'bar',
+
+    data: {
+        labels: ["Assincrono javascript", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            label: "My First dataset",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [100, 10, 5, 2, 20, 30, 45],
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+}
+window.onload = codeAddress;
+</script>
+
 
 
 model IEnumerable<App.Models.Pessoa>
